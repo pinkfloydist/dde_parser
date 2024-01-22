@@ -1,0 +1,125 @@
+/* Overall Body Style */
+body {
+    font-family: Arial, sans-serif;
+    color: #ECEFF4;
+    background-color: #2E3440;
+    line-height: 1.6;
+}
+
+/* Header and Footer */
+header, footer {
+    background: #2E3440;
+    color: #ECEFF4;
+    text-align: center;
+    padding: 1em 0;
+}
+
+/* Main Content Area */
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Button Styles */
+button, .button {
+    background-color: #D8DEE9;
+    color: #2E3440;
+    padding: 10px 15px;
+	margin: 10px;
+	margin-left: 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+button:hover, .button:hover {
+    background-color: #EBCB8B;
+}
+
+/* Template Load Button Style */
+.template-load {
+    background-color: #4C566A;
+    border-color: #4C566A;
+}
+
+.template-load:hover {
+    background-color: #434C5E;
+    border-color: #434C5E;
+}
+
+.template-load #templateFile {
+    background-color: #BF616A;
+	padding: 5px;
+	margin-left: 5%;
+	border-radius: 4px;
+}
+
+/* Textarea Style */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: inset 10px 10px 20px rgba(163, 190, 140,.5);
+    min-height: 30px;
+    resize: vertical;
+}
+
+/* Form Elements */
+input[type='text'],
+input[type='number'],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Table Style */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+/* Link Style */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}

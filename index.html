@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Differential Equation Parser with Template</title>
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="template-load">
+        <input type="file" id="templateFile" accept=".py, .txt"/>
+        <!-- <button onclick="loadAndProcessTemplate()">Load Template</button> -->
+		Parse and convert DDEs written in simple notation to JITCDDE-Python code
+    </div>
+
+
+    <div class="container">
+		<textarea id="xdotText" placeholder="Enter equation for x_dot here..."></textarea>
+		<textarea id="ydotText" placeholder="Enter equation for y_dot here..."></textarea>
+		<!-- <textarea id="inputText" placeholder="Enter equations here..."></textarea> -->
+        <textarea id="outputText" placeholder="Output will appear here..." readonly style="min-height:300px;"></textarea>
+    </div>
+    <div class="container">
+		<button onclick="loadAndProcessTemplate()">Parse Equations</button>
+		<button onclick="copyToClipboard()">Copy to Clipboard</button>
+    </div>
+
+	<div class="container">
+		<h3> Further improvements:</h3>
+		<ul>
+		  <li>Handle common mathematical functions and constants (e, pi, trigonometrics, exp)</li>
+		  <li>Adapt output to any number of parameters</li>
+		  <li>Error Handling</li>
+		  <li>Improve parameter defaults</li>
+		</ul>
+	</div>
+
+	<script src="scripts/dde-parser.js"></script>
+</body>
+</html>
