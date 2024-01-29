@@ -1,7 +1,8 @@
 function parseEquations() {
 	var xdotText = document.getElementById('xdotText').value;
 	var ydotText = document.getElementById('ydotText').value;
-	var modelText = 'model = [' + replaceTerms(xdotText) + ',\n\t' + replaceTerms(ydotText) + ']';
+	var modelText = 'model = [' + replaceTerms(xdotText) + 
+					',\n\t' + replaceTerms(ydotText) + ']';
 
 	return modelText;
 }
@@ -9,12 +10,15 @@ function parseEquations() {
 function copyToClipboard() {
 	var outputText = document.getElementById('outputText');
 	outputText.select();
-	document.execCommand('copy');
+	navigator.clipboard.writeText(outputText.value);
 }
 
 // Parser function (adapted from previous Python code)
 function replaceTerms(inputText) {
-	inputText = inputText.replace(/(x|y)\s*\(\s*t\s*-\s*[\w\/]+\s*\)/g, function(match, p1) {
+	inputText = inputText.replace(
+		/(x|y)\s*\(\s*t\s*-\s*[\w\/]+\s*\)/g,
+		function(match, p1) {
+
 		var varIndex = p1 === 'x' ? '0' : '1';
 		var delayPart = match.split('-')[1];
 		return 'y(' + varIndex + ', t-' + delayPart.trim() ;
